@@ -4,7 +4,7 @@ body {
 	padding: 0;
 
 	color: var(--black);
-	background: #E5E5E5;
+	background: var(--main-gray);
 
 	font-family: var(--font-family);
 }
@@ -20,11 +20,13 @@ a {
 }
 
 :root {
+	--font-family: "Noto sans", sans-serif;
+	--main-gray: #E5E5E5;
+	--neutral-100: #EBEBEB;
 	--black: #3B434E;
 	--white: white;
 	--primary: #7653FC;
 	--red: #FC836D;
 	--green: #1DC37E;
 	--green-light: #C8F8E4;
-	--font-family: "Noto sans", sans-serif;
 }
