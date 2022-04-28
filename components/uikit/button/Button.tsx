@@ -1,14 +1,15 @@
 import React, { ButtonHTMLAttributes } from 'react';
 import css from './Button.module.css';
 import clsx from 'clsx';
+import ArrowIcon from '../icons/ArrowIcon';
 
 type IButtonProps = {
     className?: string;
     color: 'primary' | 'ghost';
-    icon?: React.ReactNode;
+    arrow?: 'right' | 'down' | 'none';
 } & ButtonHTMLAttributes<HTMLButtonElement>;
 
-const Button: React.FC<IButtonProps> = ({ color, children, icon = false, className, ...props }) => {
+const Button: React.FC<IButtonProps> = ({ color, children, arrow = 'none', className, ...props }) => {
     return (
         <button
             {...props}
@@ -22,7 +23,9 @@ const Button: React.FC<IButtonProps> = ({ color, children, icon = false, classNa
             )}
         >
             {children}
-            {icon}
+            {arrow !== 'none' && (
+                <span className={clsx(css.arrow, { [css.down]: arrow === 'down' })}>{<ArrowIcon />}</span>
+            )}
         </button>
     );
 };
