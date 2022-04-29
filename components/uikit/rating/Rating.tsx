@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import React, { HTMLAttributes, useEffect, useState, KeyboardEvent } from 'react';
-import StarIcon from '../../icons/StarIcon';
+import StarIcon from '../icons/StarIcon';
 import css from './Rating.module.css';
 
 type IRatingProps = {
