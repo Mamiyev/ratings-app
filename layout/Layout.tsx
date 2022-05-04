@@ -17,7 +17,7 @@ const Layout: React.FC<ILayoutProps> = ({ children }) => {
                 {children}
             </div>
             <Footer className={css.footer} />
-        </div>
+        </div> 
     );
 };
 
