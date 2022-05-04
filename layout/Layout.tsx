@@ -10,14 +10,14 @@ type ILayoutProps = {
 
 const Layout: React.FC<ILayoutProps> = ({ children }) => {
     return (
-        <>
-            <Header />
-            <div>
-                <Sidebar />
+        <div className={css.container}>
+            <Header className={css.header} />
+            <Sidebar className={css.sidebar} />
+            <div className={css.body}>
                 {children}
             </div>
-            <Footer />
-        </>
+            <Footer className={css.footer} />
+        </div>
     );
 };
 

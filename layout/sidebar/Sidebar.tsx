@@ -3,8 +3,8 @@ import css from './Sidebar.module.css';
 
 type ISidebarProps = {} & HtmlHTMLAttributes<HTMLDivElement>;
 
-const Sidebar: React.FC<ISidebarProps> = () => {
-    return <div>Sidebar</div>;
+const Sidebar: React.FC<ISidebarProps> = ({...props}) => {
+    return <div {...props}>Sidebar</div>;
 };
 
 export default Sidebar;
