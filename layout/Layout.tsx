@@ -1,4 +1,5 @@
 import React, { FunctionComponent } from 'react';
+import { AppContextProvider, IAppContext } from '../context/app.context';
 import Footer from './footer/Footer';
 import Header from './header/Header';
 import css from './Layout.module.css';
@@ -13,20 +14,20 @@ const Layout: React.FC<ILayoutProps> = ({ children }) => {
         <div className={css.container}>
             <Header className={css.header} />
             <Sidebar className={css.sidebar} />
-            <div className={css.body}>
-                {children}
-            </div>
+            <div className={css.body}>{children}</div>
             <Footer className={css.footer} />
-        </div> 
+        </div>
     );
 };
 
-export const withLayout = <T extends Record<string, unknown>>(Component: FunctionComponent<T>) => {
+export const withLayout = <T extends Record<string, unknown> & IAppContext>(Component: FunctionComponent<T>) => {
     return function withLayoutComponent(props: T): JSX.Element {
         return (
-            <Layout>
-                <Component {...props} />
-            </Layout>
+            <AppContextProvider menu={props.menu} firstCategory={props.firstCategory}>
+                <Layout>
+                    <Component {...props} />
+                </Layout>
+            </AppContextProvider>
         );
     };
 };
