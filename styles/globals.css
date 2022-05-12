@@ -23,6 +23,7 @@ a {
 :root {
 	--font-family: "Noto sans", sans-serif;
 	--main-gray: #E5E5E5;
+	--dark-gray: #787D85;
 	--neutral-100: #EBEBEB;
 	--black: #3B434E;
 	--white: white;
