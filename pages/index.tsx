@@ -6,13 +6,7 @@ import { MenuItem } from '../interfaces/menu.interface';
 function Home({ menu }: HomeProps): JSX.Element {
     return (
         <>
-            <h1>Title</h1>
-
-            <ul>
-                {menu.map((m) => (
-                    <li key={m._id.secondCategory}>{m._id.secondCategory}</li>
-                ))}
-            </ul>
+            <h1>Content</h1>
         </>
     );
 }
