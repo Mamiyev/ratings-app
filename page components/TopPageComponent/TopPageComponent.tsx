@@ -1,4 +1,5 @@
 import React from 'react';
+import AdvantageItem from '../../components/advantageItem/AdvantageItem';
 import Card from '../../components/uikit/card/Card';
 import HhData from '../../components/uikit/hhData/HhData';
 import Tag from '../../components/uikit/tag/Tag';
@@ -33,7 +34,22 @@ const TopPageComponent: React.FC<ITopPageComponentProps> = ({ page, products, fi
                     hh.ru
                 </Tag>
             </div>
-			{firstCategory === TopLevelCategory.Courses && <HhData {...page.hh}/>}
+            {firstCategory === TopLevelCategory.Courses && page.hh && <HhData {...page.hh} />}
+            {page.advantages && page.advantages.length > 0 && (
+                <div className={css.advantageWrap}>
+                    <h2 className={css.advantageTitle}>Преимущества</h2>
+                    <AdvantageItem advantages={page.advantages} />
+                </div>
+            )}
+            {page.seoText && <div>{page.seoText}</div>}
+            <div>
+                <h2>Получаемые навыки</h2>
+            </div>
+            {page.tags.map((t) => (
+                <Tag key={t} color={'primary'}>
+                    {t}
+                </Tag>
+            ))}
         </div>
     );
 };

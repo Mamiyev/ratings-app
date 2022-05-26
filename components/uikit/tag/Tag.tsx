@@ -5,11 +5,11 @@ import clsx from 'clsx';
 type ITagProps = {
     className?: string;
     size?: 's' | 'm';
-	color?: 'red' |'green' | 'gray' | 'ghost' | 'primary';
+    color?: 'red' | 'green' | 'gray' | 'ghost' | 'primary';
     href?: string;
 } & HTMLAttributes<HTMLDivElement>;
 
-const Tag: React.FC<ITagProps> = ({ children, size, color = 'ghost', href, className, ...props }) => {
+const Tag: React.FC<ITagProps> = ({ children, size = 's', color = 'ghost', href, className, ...props }) => {
     return (
         <div
             className={clsx(
