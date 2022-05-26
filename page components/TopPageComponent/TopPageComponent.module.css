@@ -1,7 +1,6 @@
 .head {
     display: grid;
     grid-template-columns: auto 1fr auto;
-
     align-items: center;
     justify-items: left;
     gap: 20px;
@@ -14,7 +13,6 @@
 .hhTitle {
     display: grid;
     grid-template-columns: auto 1fr;
-
     align-items: center;
     justify-items: left;
     gap: 20px;
@@ -24,7 +22,6 @@
 
 .categoryTitle {
     margin: 0;
-
     font-size: 22px;
     line-height: 30px;
 }
