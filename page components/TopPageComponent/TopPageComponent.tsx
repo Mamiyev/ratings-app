@@ -41,7 +41,7 @@ const TopPageComponent: React.FC<ITopPageComponentProps> = ({ page, products, fi
                     <AdvantageItem advantages={page.advantages} />
                 </div>
             )}
-            {page.seoText && <div>{page.seoText}</div>}
+            {page.seoText && <div className={css.seo} dangerouslySetInnerHTML={{ __html: page.seoText }} />}
             <div>
                 <h2>Получаемые навыки</h2>
             </div>
