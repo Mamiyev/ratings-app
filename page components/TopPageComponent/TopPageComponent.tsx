@@ -1,5 +1,6 @@
 import React from 'react';
 import AdvantageItem from '../../components/advantageItem/AdvantageItem';
+import Sort, { SortEnum } from '../../components/sort/Sort';
 import Card from '../../components/uikit/card/Card';
 import HhData from '../../components/uikit/hhData/HhData';
 import Tag from '../../components/uikit/tag/Tag';
@@ -23,7 +24,7 @@ const TopPageComponent: React.FC<ITopPageComponentProps> = ({ page, products, fi
                         {products.length}
                     </Tag>
                 )}
-                <span>Сортировка</span>
+                <Sort sort={SortEnum.Rating} setSort={() => {}} />
             </div>
 
             <div>{products && products.map((p) => <div key={p._id}>{p.title}</div>)}</div>
