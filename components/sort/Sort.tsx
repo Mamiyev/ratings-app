@@ -23,7 +23,7 @@ const Sort: React.FC<ISortProps> = ({ sort, setSort, className, ...props }) => {
                 <SortIcon className={css.sortIcon} /> По рейтингу
             </button>
             <button onClick={() => setSort(SortEnum.Price)} className={clsx({ [css.active]: sort === SortEnum.Price })}>
-                <SortIcon className={css.sortIcon} /> По цене
+                <SortIcon className={css.sortIcon} /> По&nbsp;цене
             </button>
         </div>
     );
