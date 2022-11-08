@@ -1,16 +1,16 @@
+import React from 'react';
 import clsx from 'clsx';
-import React, { HtmlHTMLAttributes } from 'react';
-import {format} from 'date-fns'
+import { format } from 'date-fns';
 import css from './Footer.module.css';
 
 type IFooterProps = {
-    className: string
+    className: string;
 };
 
-const Footer: React.FC<IFooterProps> = ({className, ...props}) => {
+const Footer: React.FC<IFooterProps> = ({ className, ...props }) => {
     return (
         <footer className={clsx(css.footer, className)} {...props}>
-            <div>OwlTop © 2020 - {format(new Date(), 'yyyy')} Все права защищены</div>
+            <div>Ratings © {format(new Date(), 'yyyy')} Все права защищены</div>
             <a href="#" target="_blank">
                 Пользовательское соглашение
             </a>
