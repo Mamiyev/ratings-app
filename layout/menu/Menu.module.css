@@ -1,73 +1,79 @@
 .firstLevel {
-    display: grid;
+	display: grid;
 
-    align-items: center;
+	align-items: center;
 
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 25px;
-    grid-template-columns: 24px 1fr;
-    gap: 20px;
+	color: var(--white);
+
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 25px;
+	grid-template-columns: 24px 1fr;
+	gap: 20px;
 }
 
 .firstLevelActive,
 .firstLevel:hover {
-    color: var(--primary);
+	color: #5EDBC4;
+}
+
+.firstLevel svg {
+	fill: var(--white);
 }
 
 .firstLevelActive svg,
 .firstLevel:hover svg {
-    fill: var(--primary);
+	fill: #5EDBC4;
 }
 
 .secondLevel {
-    margin-bottom: 10px;
+	margin-bottom: 10px;
 
-    cursor: pointer;
-    text-transform: uppercase;
+	cursor: pointer;
+	text-transform: uppercase;
 
-    color: var(--dark-gray);
+	color: var(--white);
 
-    font-size: 12px;
-    font-weight: 300;
-    line-height: 16px;
+	font-size: 12px;
+	font-weight: 300;
+	line-height: 16px;
 }
 
 .secondBlock {
-    margin-top: 15px;
-    margin-left: 12px;
-    padding-left: 32px;
+	margin-top: 15px;
+	margin-left: 12px;
+	padding-left: 32px;
 
-    border-left: 1px solid #dfdfdf;
+	border-left: 1px solid #DFDFDF;
 }
 
 .secondLevelBlock {
-    display: none;
+	display: none;
 }
 
 .secondLevelBlockOpened {
-    display: block;
+	display: block;
 }
 
 .secondLevelBlockOpened:last-child {
-    margin-bottom: 20px;
+	margin-bottom: 20px;
 }
 
 .thirdLevel {
-    display: block;
+	display: block;
 
-    margin-bottom: 10px;
+	margin-bottom: 10px;
 
-    cursor: pointer;
+	cursor: pointer;
 
-    color: var(--dark-gray);
+	color: var(--white);
 
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 19px;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 19px;
 }
 
 .thirdLevelActive,
 .thirdLevel:hover {
-    color: var(--primary);
+	color: #5EDBC4;
 }

@@ -1,0 +1,43 @@
+.card {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	margin-bottom: 30px;
+
+	padding: 30px;
+	gap: 10px;
+}
+
+.topWrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.titleInfo {
+	display: flex;
+	gap: 20px;
+
+	align-items: center;
+}
+
+.title {
+	display: flex;
+	flex-direction: column;
+	gap: 9px;
+}
+
+.pricesInfo {
+	display: flex;
+	justify-content: space-between;
+	gap: 40px;
+}
+
+.pricesInfo .item {
+	display: flex;
+	flex-direction: column;
+	gap: 9px;
+
+	justify-content: space-between;
+}

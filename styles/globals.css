@@ -5,7 +5,7 @@ body {
 
 	color: var(--black);
 
-	background: var(--main-gray);
+	background: var(--white);
 
 	font-family: var(--font-family);
 }
@@ -20,6 +20,15 @@ a {
 	box-sizing: border-box;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+}
+
 :root {
 	--font-family: "Noto sans", sans-serif;
 	--main-gray: #F5F6F8;
@@ -27,7 +36,7 @@ a {
 	--neutral-100: #EBEBEB;
 	--black: #3B434E;
 	--white: white;
-	--primary: #7653FC;
+	--primary: #315385;
 	--primary-hover: #5636D4;
 	--red: #FC836D;
 	--green: #1DC37E;

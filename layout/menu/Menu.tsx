@@ -7,21 +7,20 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { firstLevelMenu } from '../../helpers/helpers';
 
-
-
 const Menu = ({ ...props }): JSX.Element => {
     const { menu, setMenu, firstCategory } = useContext(AppContext);
     const router = useRouter();
 
     const openSecondLevel = (secondCategory: string) => {
-        setMenu && setMenu(
-            menu.map((m) => {
-                if (m._id.secondCategory === secondCategory) {
-                    m.isOpened = !m.isOpened;
-                }
-                return m;
-            }),
-        );
+        setMenu &&
+            setMenu(
+                menu.map((m) => {
+                    if (m._id.secondCategory === secondCategory) {
+                        m.isOpened = !m.isOpened;
+                    }
+                    return m;
+                }),
+            );
     };
 
     const buildFirstLevel = () => {
@@ -68,7 +67,7 @@ const Menu = ({ ...props }): JSX.Element => {
     };
     const buildThirdLevel = (pages: PageItem[], route: string) => {
         return pages.map((p) => (
-            <Link href={`/${route}/${p.alias}`}>
+            <Link key={p._id} href={`/${route}/${p.alias}`}>
                 <a
                     className={clsx(css.thirdLevel, {
                         [css.thirdLevelActive]: `/${route}/${p.alias}` === router.asPath,

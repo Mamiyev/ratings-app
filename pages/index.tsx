@@ -2,11 +2,13 @@ import { withLayout } from '../layout/Layout';
 import axios from 'axios';
 import { GetStaticProps } from 'next';
 import { MenuItem } from '../interfaces/menu.interface';
+import Product from '../components/product/Product';
 
 function Home({ menu }: HomeProps): JSX.Element {
     return (
         <>
-            <h1>Content</h1>
+            <h1>Лучшие курсы онлайн</h1>
+            <p>Подборки лучших курсов и рейтинги, основанные на реальных отзывах.</p>
         </>
     );
 }

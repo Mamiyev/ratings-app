@@ -1,7 +1,7 @@
 import React from 'react';
 import AdvantageItem from '../../components/advantageItem/AdvantageItem';
+import Product from '../../components/product/Product';
 import Sort, { SortEnum } from '../../components/sort/Sort';
-import Card from '../../components/uikit/card/Card';
 import HhData from '../../components/uikit/hhData/HhData';
 import Tag from '../../components/uikit/tag/Tag';
 import { TopLevelCategory, TopPageModel } from '../../interfaces/page.interface';
@@ -27,7 +27,7 @@ const TopPageComponent: React.FC<ITopPageComponentProps> = ({ page, products, fi
                 <Sort sort={SortEnum.Rating} setSort={() => {}} />
             </div>
 
-            <div>{products && products.map((p) => <div key={p._id}>{p.title}</div>)}</div>
+            <div>{products && products.map((p) => <Product key={p._id} product={p} />)}</div>
 
             <div className={css.hhTitle}>
                 <h2 className={css.categoryTitle}>Вакансии - {page.category}</h2>
