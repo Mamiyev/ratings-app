@@ -23,7 +23,7 @@ const Tag: React.FC<ITagProps> = ({ children, size = 's', color = 'ghost', href,
                     [css.ghost]: color === 'ghost',
                     [css.primary]: color === 'primary',
                 },
-                css.className,
+                className,
             )}
             {...props}
         >

@@ -2,6 +2,7 @@
 	display: inline-block;
 
 	box-sizing: border-box;
+	margin-top: 5px;
 	margin-right: 5px;
 
 	border-radius: 20px;
@@ -35,10 +36,8 @@
 }
 
 .green {
-	color: var(--green);
+	color: var(--black);
 	background-color: var(--green-light);
-
-	font-weight: bold;
 }
 
 .ghost {

@@ -25,7 +25,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+p {
 	margin: 0;
 }
 
@@ -33,12 +34,33 @@ h6 {
 	--font-family: "Noto sans", sans-serif;
 	--main-gray: #F5F6F8;
 	--dark-gray: #787D85;
+	--light-gray: #B5B9C0;
 	--neutral-100: #EBEBEB;
 	--black: #3B434E;
 	--white: white;
 	--primary: #315385;
 	--primary-hover: #5F7BA1;
 	--red: #FC836D;
-	--green: #1DC37E;
+	--green: #5EDBC4;
 	--green-light: #C8F8E4;
+}
+
+::-webkit-scrollbar {
+	width: 12px;
+	height: 12px;
+
+	border-left: 7px solid transparent;
+	border-radius: 10px;
+
+	box-shadow: inset 6px 0 0 0 rgb(207 205 205);
+}
+
+::-webkit-scrollbar-track {
+	border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+	border-left: 7px solid transparent;
+	border-radius: 5px;
+	box-shadow: inset 12px 0 0 0 #5EDBC4;
 }
