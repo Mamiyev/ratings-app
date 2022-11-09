@@ -6,6 +6,7 @@ import Tag from '../uikit/tag/Tag';
 import css from './Product.module.css';
 import Image from 'next/image';
 import Button from '../uikit/button/Button';
+import Divider from '../uikit/divider/Divider';
 
 type IProductProps = {
     product: ProductModel;
@@ -51,9 +52,9 @@ const Product: React.FC<IProductProps> = ({ product }) => {
                     </div>
                 </div>
             </div>
-            <hr />
+            <Divider />
             <div className={css.content}>{product.description}</div>
-            <hr />
+            <Divider />
 
             <div className={css.actions}>
                 <Button color="primary">Узнать подробнее</Button>
