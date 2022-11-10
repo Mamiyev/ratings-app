@@ -5,7 +5,6 @@
     "editor.codeActionsOnSave": {
         "source.fixAll.stylelint": true
     },
-    "cSpell.words": ["stylelint"],
     "[html]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },

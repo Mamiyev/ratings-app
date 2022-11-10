@@ -1,5 +1,4 @@
 import React from 'react';
-import css from './CheckIcon.module.css';
 
 type ICheckIconProps = {};
 

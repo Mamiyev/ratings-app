@@ -1,5 +1,4 @@
 import React from 'react';
-import css from './SortIcon.module.css';
 
 type ISortIconProps = {
     className?: string;
