@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useReducer, useState } from 'react';
 import AdvantageItem from '../../components/advantageItem/AdvantageItem';
 import Product from '../../components/product/Product';
 import Sort, { SortEnum } from '../../components/sort/Sort';
@@ -6,6 +6,7 @@ import HhData from '../../components/uikit/hhData/HhData';
 import Tag from '../../components/uikit/tag/Tag';
 import { TopLevelCategory, TopPageModel } from '../../interfaces/page.interface';
 import { ProductModel } from '../../interfaces/product.interface';
+import { sortReducer } from './sort.reducer';
 import css from './TopPageComponent.module.css';
 
 export type ITopPageComponentProps = {
@@ -15,6 +16,19 @@ export type ITopPageComponentProps = {
 };
 
 const TopPageComponent: React.FC<ITopPageComponentProps> = ({ page, products, firstCategory }) => {
+    const [{ products: sortedProducts, sort }, dispatchSort] = useReducer(sortReducer, {
+        products,
+        sort: SortEnum.Reset,
+    });
+
+    const onSortClick = (sort: Exclude<SortEnum, SortEnum.Reset>) => {
+        dispatchSort({ type: sort });
+    };
+
+    useEffect(() => {
+        dispatchSort({ type: 'reset', initialState: products });
+    }, [products]);
+
     return (
         <div className={css.wrapper}>
             <div className={css.head}>
@@ -24,10 +38,10 @@ const TopPageComponent: React.FC<ITopPageComponentProps> = ({ page, products, fi
                         {products.length}
                     </Tag>
                 )}
-                <Sort sort={SortEnum.Rating} setSort={() => {}} />
+                <Sort sort={sort} setSort={onSortClick} />
             </div>
 
-            <div>{products && products.map((p) => <Product key={p._id} product={p} />)}</div>
+            <div>{sortedProducts && sortedProducts.map((p) => <Product key={p._id} product={p} />)}</div>
 
             <div className={css.hhTitle}>
                 <h2 className={css.categoryTitle}>Вакансии - {page.category}</h2>

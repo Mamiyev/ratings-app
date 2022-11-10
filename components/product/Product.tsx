@@ -14,7 +14,6 @@ type IProductProps = {
 };
 
 const Product: React.FC<IProductProps> = ({ product }) => {
-    console.log(product);
     return (
         <Card className={css.card}>
             <div className={css.topWrapper}>
@@ -57,7 +56,7 @@ const Product: React.FC<IProductProps> = ({ product }) => {
                     </div>
                     <div className={css.item}>
                         <span className={css.itemValue}>
-                            <Rating rating={4} />
+                            <Rating rating={product.reviewAvg ?? product.initialRating} />
                         </span>
                         <div className={css.itemSubtitle}>
                             {product.reviewCount} {declOfNum(product.reviewCount, ['отзыв', 'отзыва', 'отзывов'])}

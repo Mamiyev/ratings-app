@@ -15,8 +15,6 @@ const Search: React.FC<ISearchProps> = ({ ...props }) => {
         setSearch(e.target.value);
     };
 
-    console.log(search);
-
     const onSearchSubmit = () => {
         router.push({
             pathname: '/search',

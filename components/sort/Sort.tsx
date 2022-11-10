@@ -3,15 +3,16 @@ import React, { HTMLAttributes } from 'react';
 import SortIcon from '../uikit/icons/SortIcon';
 import css from './Sort.module.css';
 
-export type ISortProps = {
-    sort: SortEnum;
-    setSort: (sort: SortEnum) => void;
-} & HTMLAttributes<HTMLDivElement>;
-
 export enum SortEnum {
     Rating,
     Price,
+    Reset,
 }
+
+export type ISortProps = {
+    sort: SortEnum;
+    setSort: (sort: Exclude<SortEnum, SortEnum.Reset>) => void;
+} & HTMLAttributes<HTMLDivElement>;
 
 const Sort: React.FC<ISortProps> = ({ sort, setSort, className, ...props }) => {
     return (
@@ -22,8 +23,9 @@ const Sort: React.FC<ISortProps> = ({ sort, setSort, className, ...props }) => {
             >
                 <SortIcon className={css.sortIcon} /> По рейтингу
             </button>
+
             <button onClick={() => setSort(SortEnum.Price)} className={clsx({ [css.active]: sort === SortEnum.Price })}>
-                <SortIcon className={css.sortIcon} /> По&nbsp;цене
+                <SortIcon className={css.sortIcon} /> По цене
             </button>
         </div>
     );
