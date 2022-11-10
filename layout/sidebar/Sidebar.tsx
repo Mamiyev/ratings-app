@@ -11,9 +11,11 @@ type ISidebarProps = {
 
 const Sidebar: React.FC<ISidebarProps> = ({ className }) => {
     return (
-        <div className={clsx(css.sidebar, className)}>
-            <Search />
-            <Menu />
+        <div className={clsx(css.container, className)}>
+            <div className={css.sidebar}>
+                <Search />
+                <Menu />
+            </div>
         </div>
     );
 };

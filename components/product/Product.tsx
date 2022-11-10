@@ -80,7 +80,7 @@ const Product: React.FC<IProductProps> = ({ product }) => {
                 </div>
                 <div className={css.advantages}>
                     <h4>Преимущества</h4>
-                    <p>{product.advantages}</p>
+                    {product.advantages ? <p>{product.advantages}</p> : 'Нет данных'}
                 </div>
             </div>
 

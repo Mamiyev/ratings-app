@@ -1,8 +1,12 @@
-.sidebar > div {
+.sidebar {
 	position: sticky;
 	top: 0;
 
+	display: flex;
+
 	overflow-y: auto;
+	flex-direction: column;
+	gap: 30px;
 
 	/* height: 600px; */
 
