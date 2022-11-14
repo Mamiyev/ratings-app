@@ -16,15 +16,21 @@
 
 .titleInfo {
 	display: flex;
-	gap: 20px;
 
 	align-items: center;
+
+	width: 50%;
+	gap: 20px;
 }
 
 .title {
 	display: flex;
 	flex-direction: column;
-	gap: 9px;
+	gap: 5px;
+}
+
+.title h2 {
+	font-size: 18px;
 }
 
 .pricesInfo {
@@ -101,4 +107,51 @@
 
 .advantages h4 {
 	margin-bottom: 5px;
+}
+
+@media screen and (max-width: 1360px) {
+	.topWrapper {
+		align-items: flex-start;
+		flex-direction: column;
+		gap: 30px;
+	}
+
+	.titleInfo {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.feature {
+		flex-direction: column;
+		gap: 30px;
+	}
+
+	.characteristicsBox {
+		width: 100%;
+	}
+
+	.advantages {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.titleInfo {
+		align-items: flex-start;
+		flex-direction: column;
+	}
+
+	.pricesInfo {
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	.pricesInfo .item {
+		align-items: center;
+		flex-direction: row-reverse;
+		gap: 20px;
+
+		justify-content: flex-end;
+	}
 }

@@ -2,11 +2,12 @@ import { withLayout } from '../layout/Layout';
 import axios from 'axios';
 import { GetStaticProps } from 'next';
 import { MenuItem } from '../interfaces/menu.interface';
+import Typography from '../components/uikit/typography/Typography';
 
 function Home({ menu }: HomeProps): JSX.Element {
     return (
         <>
-            <h1>Лучшие курсы онлайн</h1>
+            <Typography variant="h1">Лучшие курсы онлайн</Typography>
             <p>Подборки лучших курсов и рейтинги, основанные на реальных отзывах.</p>
         </>
     );

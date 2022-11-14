@@ -1,12 +1,15 @@
 .head {
-	display: grid;
-	grid-template-columns: auto 1fr auto;
-
+	display: flex;
 	align-items: center;
-	justify-items: left;
-	gap: 20px;
+	justify-content: space-between;
 
 	margin-bottom: 25px;
+}
+
+.titleBox {
+	display: flex;
+	align-items: center;
+	gap: 20px;
 }
 
 .hhTitle {
@@ -17,10 +20,28 @@
 	justify-items: left;
 	gap: 20px;
 
-	margin-bottom: 25px;
+	margin-top: 25px;
+	margin-bottom: 30px;
 }
 
 .categoryTitle {
 	font-size: 22px;
 	line-height: 30px;
+}
+
+.advantageTitle {
+	margin-bottom: 30px !important;
+}
+
+.skills {
+	margin-top: 30px !important;
+	margin-bottom: 20px !important;
+}
+
+@media screen and (max-width: 600px) {
+	.head {
+		align-items: flex-start;
+		flex-direction: column;
+		gap: 20px;
+	}
 }

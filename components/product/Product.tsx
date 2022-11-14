@@ -8,6 +8,7 @@ import Image from 'next/image';
 import Button from '../uikit/button/Button';
 import Divider from '../uikit/divider/Divider';
 import { declOfNum, priceRu } from '../../helpers/helpers';
+import Typography from '../uikit/typography/Typography';
 
 type IProductProps = {
     product: ProductModel;
@@ -27,7 +28,7 @@ const Product: React.FC<IProductProps> = ({ product }) => {
                         />
                     </div>
                     <div className={css.title}>
-                        <h2>{product.title}</h2>
+                        <Typography variant="h3">{product.title}</Typography>
                         <div>
                             {product.tags.slice(0, 2).map((title) => (
                                 <Tag key={title}>{title}</Tag>
@@ -78,7 +79,7 @@ const Product: React.FC<IProductProps> = ({ product }) => {
                     ))}
                 </div>
                 <div className={css.advantages}>
-                    <h4>Преимущества</h4>
+                    <Typography variant="h4">Преимущества</Typography>
                     {product.advantages ? <p>{product.advantages}</p> : 'Нет данных'}
                 </div>
             </div>
