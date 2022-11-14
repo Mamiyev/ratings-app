@@ -2,7 +2,6 @@ import { withLayout } from '../layout/Layout';
 import axios from 'axios';
 import { GetStaticProps } from 'next';
 import { MenuItem } from '../interfaces/menu.interface';
-import Product from '../components/product/Product';
 
 function Home({ menu }: HomeProps): JSX.Element {
     return (

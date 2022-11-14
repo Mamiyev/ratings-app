@@ -11,9 +11,9 @@ const Card: ForwardRefRenderFunction<HTMLDivElement, ICardProps> = ({
     color = 'white',
     className,
     ...props
-}) => {
+}, ref) => {
     return (
-        <div className={clsx(css.card, className, { [css.blue]: color === 'blue' })} {...props}>
+        <div className={clsx(css.card, className, { [css.blue]: color === 'blue' })} ref={ref} {...props}>
             {children}
         </div>
     );
