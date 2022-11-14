@@ -45,9 +45,8 @@ const TopPageComponent: React.FC<ITopPageComponentProps> = ({ page, products, fi
                 </div>
                 <Sort sort={sort} setSort={onSortClick} />
             </div>
-
+            {products.length === 0 && 'Курсы отсутсвуют'}
             <div>{sortedProducts && sortedProducts.map((p) => <Product key={p._id} product={p} />)}</div>
-
             <div className={css.hhTitle}>
                 <Typography variant="h2" className={css.categoryTitle}>
                     Вакансии - {page.category}
@@ -56,9 +55,7 @@ const TopPageComponent: React.FC<ITopPageComponentProps> = ({ page, products, fi
                     hh.ru
                 </Tag>
             </div>
-
             {firstCategory === TopLevelCategory.Courses && page.hh && <HhData {...page.hh} />}
-
             {page.advantages && page.advantages.length > 0 && (
                 <div className={css.advantageWrap}>
                     <Typography variant="h2" className={css.advantageTitle}>
@@ -69,7 +66,9 @@ const TopPageComponent: React.FC<ITopPageComponentProps> = ({ page, products, fi
             )}
             {page.seoText && <div className={css.seo} dangerouslySetInnerHTML={{ __html: page.seoText }} />}
             <div>
-                <Typography variant="h2" className={css.skills}>Получаемые навыки</Typography>
+                <Typography variant="h2" className={css.skills}>
+                    Получаемые навыки
+                </Typography>
             </div>
             {page.tags.map((t) => (
                 <Tag key={t} color={'primary'}>

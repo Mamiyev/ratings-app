@@ -4,7 +4,7 @@ import { GetStaticProps } from 'next';
 import { MenuItem } from '../interfaces/menu.interface';
 
 function Search(): JSX.Element {
-    return <>Search</>;
+    return <>Поиск временно не работает</>;
 }
 
 export default withLayout(Search);

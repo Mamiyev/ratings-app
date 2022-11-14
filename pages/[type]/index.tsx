@@ -6,7 +6,7 @@ import { MenuItem } from '../../interfaces/menu.interface';
 import { withLayout } from '../../layout/Layout';
 
 function Type({ firstCategory }: TypeProps): JSX.Element {
-    return <>Type: {firstCategory}</>;
+    return <>В разработке...</>;
 }
 
 export default withLayout(Type);
