@@ -13,5 +13,5 @@
 	padding: 30px;
 
 	border-radius: 10px;
-	background: #315385;
+	background: var(--primary);
 }
