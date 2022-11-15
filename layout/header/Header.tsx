@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import { motion, useReducedMotion } from 'framer-motion';
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
@@ -7,9 +8,11 @@ import CloseIcon from '../../components/uikit/icons/CloseIcon';
 import Sidebar from '../sidebar/Sidebar';
 import css from './Header.module.css';
 
-type IHeaderProps = {};
+type IHeaderProps = {
+    className?: string;
+};
 
-const Header: React.FC<IHeaderProps> = () => {
+const Header: React.FC<IHeaderProps> = ({ className }) => {
     const [isOpened, setIsOpened] = useState<boolean>(false);
     const router = useRouter();
     const shouldReduceMotion = useReducedMotion();
@@ -33,7 +36,7 @@ const Header: React.FC<IHeaderProps> = () => {
     };
 
     return (
-        <header className={css.header}>
+        <header className={clsx(css.header, className)}>
             <span className={css.logo}>Ratings App</span>
             <Button className={css.searchButton} color="ghost" onClick={() => setIsOpened(true)}>
                 <BurgerIcon />
