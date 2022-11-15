@@ -34,7 +34,7 @@ const Header: React.FC<IHeaderProps> = () => {
 
     return (
         <header className={css.header}>
-            <span>Ratings App</span>
+            <span className={css.logo}>Ratings App</span>
             <Button className={css.searchButton} color="ghost" onClick={() => setIsOpened(true)}>
                 <BurgerIcon />
             </Button>
